@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
                           Tab(
                             child: FittedBox(
                               child: Text(
-                                'Customer',
+                                'Track',
                                 style: GoogleFonts.alegreya(
                                     color: Colors.white, fontSize: 19),
                               ),
@@ -74,7 +74,7 @@ class _HomeState extends State<Home> {
                           Tab(
                             child: FittedBox(
                               child: Text(
-                                'Track',
+                                'Customer',
                                 style: GoogleFonts.alegreya(
                                     color: Colors.white, fontSize: 19),
                               ),
@@ -122,13 +122,17 @@ class _HomeState extends State<Home> {
                     body: TabBarView(
                       children: [
 
-                        Container(
-                          child: CustomerScreen(),
-                        ),
+                        // Container(
+                        //   child: CustomerScreen(),
+                        // ),
 
                          Container(
                              child: MyHomePage(),
                          ),
+
+                  Container(
+                      child: CustomerScreen(),
+                    ),
                         // Container(
                         //   child: StockScreen(),
                         // ),

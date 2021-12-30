@@ -3,13 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../constants.dart';
+import 'package:dropdown_formfield/dropdown_formfield.dart';
 
 class CustomerScreen extends StatefulWidget {
   const CustomerScreen({Key key}) : super(key: key);
 
+
+
   @override
   _CustomerScreenState createState() => _CustomerScreenState();
 }
+String _myActivity;
+String _myActivity1;
+final formKey = new GlobalKey<FormState>();
+
 
 class _CustomerScreenState extends State<CustomerScreen> {
   @override
@@ -25,83 +32,116 @@ class _CustomerScreenState extends State<CustomerScreen> {
               child: Column(
                 children: [
 
-                  Text("Select Customers" , style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold,color:Colors.black ), ),
+                  Text("Select Customer" , style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold,color:Colors.black ), ),
                   SizedBox (height: 60),
-                  TextFormField(
+              DropDownFormField(
+                 titleText: 'Customers',
+                hintText: 'Please Select Customer',
+                value: _myActivity,
+                onSaved: (value) {
+                  setState(() {
+                    _myActivity = value;
+                  });
+                },
+                onChanged: (value) {
+                  setState(() {
+                    _myActivity = value;
+                  });
+                },
+                dataSource: [
+                  {
+                    "display": "Ali",
+                    "value": "Ali",
+                  },
+                  {
+                    "display": "Usman",
+                    "value": "Usman",
+                  },
+                  {
+                    "display": "Daniyal",
+                    "value": "Daniyal",
+                  },
+                  {
+                    "display": "Raheem",
+                    "value": "Raheem",
+                  },
+                  {
+                    "display": "Umair",
+                    "value": "Umair",
+                  },
+                  {
+                    "display": "Khizer",
+                    "value": "Khizer",
+                  },
+                  {
+                    "display": "Usama",
+                    "value": "Usama",
+                  },
+                ],
+                textField: 'display',
+                valueField: 'value',
+              ),
 
-                    decoration: new InputDecoration(
-                      // fillColor: Colors.red, filled: true,
-                      border: new OutlineInputBorder(
-                          borderSide: new BorderSide(color: Colors.teal)),
-                      hintText: 'Enter Name',
-                      helperText: 'Write your full Name',
-                      labelText: 'User Name',
-                      prefixIcon: const Icon(
-                        Icons.person,
-                        color:kPrimaryColor,
-                      ),
-                      prefixText: ' ',
-                      suffixText: '',
-                      suffixStyle: const TextStyle(color: Colors.green),
-                      focusedBorder:OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.black, width: 2.0),
-                        borderRadius: BorderRadius.circular(25.0),
-                      ),
-                    ),
-                  ),
 
 
                   SizedBox (height: 20),
-                  TextFormField(
-
-                    decoration: new InputDecoration(
-                      border: new OutlineInputBorder(
-                          borderSide: new BorderSide(color: Colors.teal)),
-                      hintText: 'Enter Email',
-                      helperText: 'Write your Email here',
-                      labelText: 'Email',
-                      prefixIcon: const Icon(
-                        Icons.attach_email_rounded,
-                        color:kPrimaryColor,
-                      ),
-                      prefixText: ' ',
-                      suffixText: '',
-                      suffixStyle: const TextStyle(color: Colors.green),
-                      focusedBorder:OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.black, width: 2.0),
-                        borderRadius: BorderRadius.circular(55.0),
-                      ),
-                    ),
+                  DropDownFormField(
+                    titleText: 'Customers ID',
+                    hintText: 'Please Select Customer ID',
+                    value: _myActivity1,
+                    onSaved: (value) {
+                      setState(() {
+                        _myActivity1 = value;
+                      });
+                    },
+                    onChanged: (value) {
+                      setState(() {
+                        _myActivity1= value;
+                      });
+                    },
+                    dataSource: [
+                      {
+                        "display": "001",
+                        "value": "001",
+                      },
+                      {
+                        "display": "123",
+                        "value": "123",
+                      },
+                      {
+                        "display": "221",
+                        "value": "221",
+                      },
+                      {
+                        "display": "1043",
+                        "value": "1043",
+                      },
+                      {
+                        "display": "1223",
+                        "value": "1223",
+                      },
+                      {
+                        "display": "1111",
+                        "value": "1111",
+                      },
+                      {
+                        "display": "1212",
+                        "value": "1212",
+                      },
+                    ],
+                    textField: 'display',
+                    valueField: 'value',
                   ),
-                  SizedBox (height: 20),
-                  TextFormField(
-                    decoration: new InputDecoration(
-                        border: new OutlineInputBorder(
-                            borderSide: new BorderSide(color: Colors.teal)
-                        ), focusedBorder:OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.black, width: 2.0),
-                      borderRadius: BorderRadius.circular(55.0),
-                    ),
-                        prefixIcon: const Icon(
-                          Icons.add_ic_call_rounded,
-                          color:kPrimaryColor,
-                        ),
-                        helperText: 'Write your Phone Number',
-                        labelText: "Phone Number"),
 
-                    keyboardType: TextInputType.number,
-                    inputFormatters: <TextInputFormatter>[
-                      FilteringTextInputFormatter.digitsOnly,
 
-                    ], // Only numbers can be entered
-                  ),
+
                   SizedBox (height: 60),
 
                   RaisedButton(
                     disabledColor: kPrimaryColor,
                     disabledTextColor: Colors.black,
                     onPressed: null,
-                    child: Text('Add'),
+                    child: Text('Done'),
                   ),
                 ],
               ),

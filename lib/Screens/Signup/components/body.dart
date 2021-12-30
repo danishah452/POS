@@ -25,11 +25,11 @@ class Body extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
             ),
             SizedBox(height: size.height * 0.03),
-            Image.asset(
-              "assets/images/salesicon.png",
-              height: size.height * 0.25,
-
-            ),
+            // Image.asset(
+            //   "assets/images/salesicon.png",
+            //   height: size.height * 0.25,
+            //
+            // ),
             RoundedInputField(
               hintText: "Your Email",
               onChanged: (value) {},

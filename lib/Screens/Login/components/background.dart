@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../animation.dart';
+
 class Background extends StatelessWidget {
   final Widget child;
   const Background({
@@ -16,6 +18,12 @@ class Background extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: <Widget>[
+          Container(
+            color: Colors.white,
+            child: const SizedBox.expand(
+              child:  VariousDiscs(10),
+            ),
+          ),
           Positioned(
             top: 0,
             left: 0,

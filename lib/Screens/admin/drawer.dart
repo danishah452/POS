@@ -16,10 +16,12 @@ Drawer buildDrawer(BuildContext context) {
     child: new ListView(
       children: <Widget>[
         new Container(
+
           child: new DrawerHeader(
             // child: new CircleAvatar(),
             child: Container(
               child: ListTile(
+
                 // leading: Icon(Icons.favorite, color: Colors.red, size: 40),
                 title: Text(
                   ' Admin Panel',
@@ -28,10 +30,13 @@ Drawer buildDrawer(BuildContext context) {
                 ),
               ),
             ),
+
             margin: EdgeInsets.only(top: 40),
           ),
+
           // color: Colors.white,
         ),
+
         Divider(
           color: Colors.black,
           thickness: 1,
