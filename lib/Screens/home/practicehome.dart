@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'Screens/cart/cart_model.dart';
-import 'Screens/home/details_screen.dart';
-import 'constants.dart';
+import '../cart/cart_model.dart';
+import 'details_screen.dart';
+import '../../constants.dart';
 
 class PracticeHome extends StatefulWidget {
   const PracticeHome({Key key, this.product, this.onProductAdd}) : super(key: key);
@@ -72,7 +72,7 @@ class _PracticeHomeState extends State<PracticeHome> {
                     onPressed: () => Navigator.pop(context),
                     child: const Icon(
                       Icons.arrow_back_rounded,
-                     
+
                     )),
                 IconButton(
                   color: Colors.white,

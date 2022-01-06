@@ -9,6 +9,7 @@ import 'package:provider/provider.dart';
 import '../../constants.dart';
 import '../../strings.dart';
 import 'Customer.dart';
+import 'Payment.dart';
 import 'anim_map.dart';
 import 'booking_order_screen.dart';
 import 'checkout_screen.dart';
@@ -35,7 +36,7 @@ class _HomeState extends State<Home> {
             Expanded(
                 flex: 1,
                 child: DefaultTabController(
-                  length: 4,
+                  length: 5,
                   child: Scaffold(
                     appBar: AppBar(
                       actions:  [
@@ -107,6 +108,15 @@ class _HomeState extends State<Home> {
                               ),
                             ),
                           ),
+                          Tab(
+                            child: FittedBox(
+                              child: Text(
+                                'Payment',
+                                style: GoogleFonts.alegreya(
+                                    color: Colors.white, fontSize: 19),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                       title: Center(
@@ -141,6 +151,9 @@ class _HomeState extends State<Home> {
                         ),
                         Container(
                             child: CartPage(),
+                        ),
+                        Container(
+                          child: Payment(),
                         ),
                       ],
                     ),

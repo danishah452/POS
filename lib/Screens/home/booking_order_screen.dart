@@ -5,7 +5,7 @@ import 'package:flutter_auth/Screens/cart/cart_short_view.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import '../../constants.dart';
-import '../../practicehome.dart';
+import 'practicehome.dart';
 import 'details_screen.dart';
 import 'home_conntroller.dart';
 

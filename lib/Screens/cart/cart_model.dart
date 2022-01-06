@@ -57,6 +57,7 @@ class Product {
   String imgUrl;
   double price;
   int qty;
+  String desc;
 
-  Product({this.id, this.title, this.price, this.qty, this.imgUrl, String desc});
+  Product({this.id, this.title, this.price, this.qty, this.imgUrl, this.desc});
 }
