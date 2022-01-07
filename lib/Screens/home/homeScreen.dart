@@ -36,7 +36,7 @@ class _HomeState extends State<Home> {
             Expanded(
                 flex: 1,
                 child: DefaultTabController(
-                  length: 5,
+                  length: 4,
                   child: Scaffold(
                     appBar: AppBar(
                       actions:  [
@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
                             child: FittedBox(
                               child: Text(
                                 'Track',
-                                style: GoogleFonts.alegreya(
+                                style: GoogleFonts.barlow(
                                     color: Colors.white, fontSize: 19),
                               ),
                             ),
@@ -76,7 +76,17 @@ class _HomeState extends State<Home> {
                             child: FittedBox(
                               child: Text(
                                 'Customer',
-                                style: GoogleFonts.alegreya(
+                                style: GoogleFonts.barlow(
+                                    color: Colors.white, fontSize: 19),
+                              ),
+                            ),
+                          ),
+
+                          Tab(
+                            child: FittedBox(
+                              child: Text(
+                                'Booking',
+                                style: GoogleFonts.barlow(
                                     color: Colors.white, fontSize: 19),
                               ),
                             ),
@@ -84,35 +94,17 @@ class _HomeState extends State<Home> {
                           // Tab(
                           //   child: FittedBox(
                           //     child: Text(
-                          //       'Catalogue',
-                          //       style: GoogleFonts.alegreya(
-                          //           color: Colors.white, fontSize: 19),
+                          //       'Cart',
+                          //       style: GoogleFonts.biryani(
+                          //           color: Colors.white, fontSize: 18),
                           //     ),
                           //   ),
                           // ),
                           Tab(
                             child: FittedBox(
                               child: Text(
-                                'Booking',
-                                style: GoogleFonts.alegreya(
-                                    color: Colors.white, fontSize: 19),
-                              ),
-                            ),
-                          ),
-                          Tab(
-                            child: FittedBox(
-                              child: Text(
-                                'Cart',
-                                style: GoogleFonts.alegreya(
-                                    color: Colors.white, fontSize: 19),
-                              ),
-                            ),
-                          ),
-                          Tab(
-                            child: FittedBox(
-                              child: Text(
                                 'Payment',
-                                style: GoogleFonts.alegreya(
+                                style: GoogleFonts.barlow(
                                     color: Colors.white, fontSize: 19),
                               ),
                             ),
@@ -123,8 +115,7 @@ class _HomeState extends State<Home> {
                         child: FittedBox(
                           child: Text(
                             Strings.welcomeScreenTitle,
-                            style: GoogleFonts.alegreya(
-                                color: Colors.white, fontSize: 22),
+                            style: GoogleFonts.ptSansCaption(textStyle: Theme.of(context).textTheme.headline5,fontWeight: FontWeight.w700,color: Colors.white),
                           ),
                         ),
                       ),
@@ -149,9 +140,9 @@ class _HomeState extends State<Home> {
                         Container(
                           child: HomePage(),
                         ),
-                        Container(
-                            child: CartPage(),
-                        ),
+                        // Container(
+                        //     child: CartPage(),
+                        // ),
                         Container(
                           child: Payment(),
                         ),

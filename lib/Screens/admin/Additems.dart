@@ -95,12 +95,13 @@ class _AdditemsState extends State<Additems> {
                               Icons.description,
                               color:kPrimaryColor,
                             ),
+                            // hintText: 'description',
                             helperText: 'Write your item description',
                             labelText: "Description"),
 
                         keyboardType: TextInputType.text,
                         inputFormatters: <TextInputFormatter>[
-                          FilteringTextInputFormatter.digitsOnly,
+                          // FilteringTextInputFormatter.digitsOnly,
 
                         ], // Only numbers can be entered
                       ),

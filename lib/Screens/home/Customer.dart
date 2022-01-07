@@ -35,6 +35,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
                   Text("Select Customer" , style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold,color:Colors.black ), ),
                   SizedBox (height: 60),
               DropDownFormField(
+
                  titleText: 'Customers',
                 hintText: 'Please Select Customer',
                 value: _myActivity,
@@ -86,6 +87,7 @@ class _CustomerScreenState extends State<CustomerScreen> {
 
                   SizedBox (height: 20),
                   DropDownFormField(
+
                     titleText: 'Customers ID',
                     hintText: 'Please Select Customer ID',
                     value: _myActivity1,
@@ -131,15 +133,18 @@ class _CustomerScreenState extends State<CustomerScreen> {
                     ],
                     textField: 'display',
                     valueField: 'value',
+                    
                   ),
-
 
 
                   SizedBox (height: 60),
 
                   RaisedButton(
+
                     disabledColor: kPrimaryColor,
                     disabledTextColor: Colors.black,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(55)),
                     onPressed: null,
                     child: Text('Done'),
                   ),

@@ -3,6 +3,7 @@ import 'package:flutter_auth/Screens/Welcome/welcome_screen.dart';
 import 'package:flutter_auth/constants.dart';
 import 'package:flutter_auth/Screens/home/practicehome.dart';
 import 'package:flutter_auth/example.dart';
+import 'package:flutter_auth/splash.dart';
 import 'package:provider/provider.dart';
 import 'package:scoped_model/scoped_model.dart';
 
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: WelcomeScreen(),
+      home: Splash(),
     ) );
   }
 }

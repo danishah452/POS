@@ -5,6 +5,7 @@ import 'package:flutter_auth/Screens/Welcome/components/background.dart';
 import 'package:flutter_auth/components/rounded_button.dart';
 import 'package:flutter_auth/constants.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -16,9 +17,22 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "WELCOME TO LOGINSCREEN",
-              style: TextStyle(fontWeight: FontWeight.bold),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "WELCOME TO LOGINSCREEN",
+                  style: GoogleFonts.lato(
+                    textStyle: Theme.of(context).textTheme.headline6,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                IconButton(
+                  color: kPrimaryColor,
+                  onPressed: () {},
+                  icon: const Icon(Icons.favorite),
+                )
+              ],
             ),
             SizedBox(height: size.height * 0.05),
             // SvgPicture.asset(
@@ -30,13 +44,10 @@ class Body extends StatelessWidget {
               text: "User Login",
               press: () {
                 Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
-                  ),
-                );
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LoginScreen(),
+                    ));
               },
             ),
             RoundedButton(
@@ -48,7 +59,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return SignUpScreen();
+                      return AdminScreen();
                     },
                   ),
                 );

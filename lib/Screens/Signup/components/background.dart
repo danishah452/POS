@@ -33,6 +33,25 @@ class Background extends StatelessWidget {
               width: size.width * 0.35,
             ),
           ),
+          Positioned( top: 10,
+            left: 8,
+            child:
+            Column(
+
+                children: [
+                  ElevatedButton(
+
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.pink.shade50, // background
+                        onPrimary: Colors.black, // foreground
+                      ),
+                      onPressed: () => Navigator.pop(context),
+                      child: const Icon(
+                        Icons.arrow_back_rounded,
+
+                      )),
+                ] ),),
+
           Positioned(
             bottom: 0,
             left: 0,

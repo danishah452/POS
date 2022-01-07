@@ -10,6 +10,7 @@ import 'package:flutter_auth/components/rounded_button.dart';
 import 'package:flutter_auth/components/rounded_input_field.dart';
 import 'package:flutter_auth/components/rounded_password_field.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -22,9 +23,12 @@ class Body extends StatelessWidget {
           children: <Widget>[
             Text(
               "Admin Login ",
-              style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
+              style: GoogleFonts.lato(
+                textStyle: Theme.of(context).textTheme.headline6,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            SizedBox(height: size.height * 0.03),
+            SizedBox(height: size.height * 0.04),
             // Image.asset(
             //   "assets/images/salesicon.png",
             //   height: size.height * 0.25,
@@ -37,6 +41,7 @@ class Body extends StatelessWidget {
             RoundedPasswordField(
               onChanged: (value) {},
             ),
+            SizedBox(height: size.height * 0.03),
             RoundedButton(
               text: "Login",
               press: () {
@@ -50,7 +55,7 @@ class Body extends StatelessWidget {
                         );
               },
             ),
-            SizedBox(height: size.height * 0.03),
+            // SizedBox(height: size.height * 0.03),
             // AlreadyHaveAnAccountCheck(
             //   login: false,
             //   press: () {
